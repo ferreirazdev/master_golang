@@ -2,6 +2,10 @@ package wallet
 
 import "testing"
 
+// Pointers
+// Quando os valores são passados para funções/métodos, o Go cria uma cópia desses valores
+// Sendo assim, quando há a necessidade de mudança de estado é preciso a utilização de um ponteiro para o valor que se quer mudar
+
 func TestWallet(t *testing.T) {
 	confirmBalance := func(t *testing.T, wallet Wallet, expect Bitcoin) {
 		t.Helper()
